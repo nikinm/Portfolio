@@ -1,0 +1,207 @@
+.about{
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    min-height: 70vh;
+    
+    &__h2{
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 2% 0;
+        color: $baseColor;
+    }
+
+    &__contents{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    &__text{
+        display: flex;
+        min-height: 50vh;
+        color: rgb(80, 80, 80);
+    }
+
+    &__photos{
+        position: relative;
+        width: 45%;
+    }
+
+    &__img{
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        position: absolute;
+        left: 15%;
+        z-index: 15;
+    }
+
+    &__square_dashed{
+        width: 70%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        border: 3px dashed $baseColor;
+        left: 10%;
+        z-index: 1;
+        top: 10%;
+    }
+
+    &__square{
+        width: 130px;
+        height: 130px;
+        background-color: $baseColor;
+        position: absolute;
+        bottom: -7%;
+        // right: 55%;
+        left: 0;
+        z-index: 20;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        color: white;
+
+    }
+
+    &__informations{
+        width: 55%;
+    }
+
+    &__nav_element{
+        margin: 10px 3px;
+        border: none;
+        padding: 5px 15px;
+        background-color: transparent;
+        border-radius: 3px;
+        color: rgb(80, 80, 80);
+        font-weight: 500;
+    }
+
+    &__nav_element_active{
+        background-color: white;
+        color: $baseColor;
+        box-shadow: 12px 8px 72px -5px rgba(176, 176, 176, 1);
+        font-weight: 700;
+    }
+
+    &__informations{
+        margin-left: 10px;
+    }
+    
+    &__btn1{
+        background-color: $baseColor;
+        color: white;
+        border-radius: 3px;
+        padding: 10px 50px;
+        border: 3px solid $baseColor;
+        font-weight: 600;
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+        
+    }
+
+    &__btn2{
+        background-color: white;
+        color: $baseColor;
+        border: 3px solid $baseColor;
+        border-radius: 3px;
+        padding: 10px 50px;
+        box-sizing: border-box;
+        margin-left: 25px;
+        font-weight: 600;
+        transition: all 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    &__btn2:hover{
+        background-color: $baseColor;
+        color: white;
+    }
+
+    &__btn1:hover{
+        background-color: white;
+        color: $baseColor;
+    }
+
+    &__about_me{
+        display: block;
+    }
+
+    &__education{
+        display: none;
+    }
+
+    &__skills{
+        display: none;
+    }
+
+    &__experience{
+        display: none;
+    }
+
+    &__img_school{
+        width: 180px;
+        max-height: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    &__h5{
+        color: $baseColor;
+        margin: 10px 0;
+    }
+
+    &__list_el{
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1500px){
+    .about{
+        
+        &__contents{
+            display: flex;
+            flex-direction: column;
+            margin: 0 50px;
+        }
+
+        &__text{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__photos{
+            width: 100%;
+        }
+
+        &__square_dashed{
+            width: 100%;
+            left: 0;
+            top: 0;
+            border-style: solid;
+            border-width: 1px;
+            
+        }
+
+        &__square{
+            display: none;
+        }
+
+        &__informations{
+            width: 100%;
+        }
+
+        &__nav_element{
+            margin: 10px 0;
+        }
+
+        &__btn1{
+            margin-top: 20px;
+        }
+
+        &__btn2{
+            margin-top: 20px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+}

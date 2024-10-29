@@ -1,0 +1,26 @@
+@import 'values';
+@import 'nav';
+@import 'home';
+@import 'aboutme';
+@import 'technologies';
+@import 'contact';
+@import 'footer';
+
+body{
+    overflow-x: hidden;
+}
+.main{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+.nikola{
+    font-family: Dancing Script;
+    color: $baseColor;
+}
+
+@media only screen and (max-width: 768px){
+    .main{
+        width: 100%;
+    }
+}
